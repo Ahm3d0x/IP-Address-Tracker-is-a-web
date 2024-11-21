@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <!-- Links for map -->
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+
+  <!-- Javascript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <!--/ Links for map  -->
+
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+  <section>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <h4>ENG : Ahmed M Attia</h4>
+      <form id="input">
+        <input type="text" name="ip-input" id="ip-input" placeholder="Search for any IP address" />
+        <span title="click to get ip or empty and click to get your locaton" onclick="getIp()" id="btn"><img
+            src="images/icon-arrow.svg" alt=">" /></span>
+      </form>
+      <div id="dash-board">
+        <div class="card">
+          <span>IP Address 🚀</span>
+          <h2 id="ip">...</h2>
+        </div>
+
+        <div class="card">
+          <span>Location 🌎</span>
+          <h2 id="location">...</h2>
+        </div>
+
+        <div class="card">
+          <span>Timezone 🕛</span>
+          <h2 id="timezone">...</h2>
+        </div>
+
+        <div class="card">
+          <span>ISP 🔢</span>
+          <h2 id="isp">...</h2>
+        </div>
+      </div>
+    </header>
+    <aside id="mapid">
+      <div id="info" style="font-size: 20px;">
+        The MAP Will Be Here 🗺
+        <div>Tip: Submit empty value to Search for your ip Location</div>
+      </div>
+    </aside>
+  </section>
+
+  <footer style="line-height: 10px;">
+    <p class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+      <a href="https://github.com/kodaas">Ajala Fiyinfoluwa John</a>.
+      <br />
+      <br />
+    </p>
+  </footer>
+
+  <script>
+    let input = document.querySelector("#ip-input");
+
+    input.addEventListener("focus", () => {
+      let inputCon = document.querySelector("#input");
+      inputCon.classList.add("focus");
+    });
+    input.addEventListener("blur", () => {
+      let inputCon = document.querySelector("#input");
+      inputCon.classList.remove("focus");
+    });
+  </script>
+  <script></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- <div>
+  <div style="width: 25px;height: 25px;margin-top: 5px;" id="loader"></div>
+</div> -->
